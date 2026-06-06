@@ -18,7 +18,7 @@ Given a set of in-domain (ID) training samples and unlabeled OOD samples, GSA:
 Unlike density-ratio estimation or domain-adversarial approaches, GSA leverages the intrinsic geometry of the learned representation space to estimate sample importance.
 
 <p align="center">
-  <img src="figures/gsa_overview.png" width="700">
+  <img src="Figures/schematic.pdf" width="700">
 </p>
 
 ## Method
@@ -54,12 +54,10 @@ Obtain latent embeddings for ID and OOD samples using any representation learnin
 
 ```text
 .
-├── gsa.py                    # Core GSA implementation
-├── graph_utils.py            # Graph construction and geodesic distances
-├── weighting.py              # Sample weight computation
-├── experiments/              # Experimental pipelines
-├── datasets/                 # Dataset loaders
-├── figures/
+├── src/                      # Source code
+├── scripts/                  # Scripts
+├── Data_composites/          # Dataset
+├── Figures/
 └── README.md
 ```
 
@@ -69,20 +67,6 @@ Obtain latent embeddings for ID and OOD samples using any representation learnin
 pip install -r requirements.txt
 ```
 
-## Usage
-
-```python
-from gsa import compute_gsa_weights
-
-weights = compute_gsa_weights(
-    id_embeddings,
-    ood_embeddings,
-    num_anchors=50,
-    k_neighbors=10,
-)
-```
-
-The resulting weights can be used with any supervised learning algorithm.
 
 ## Applications
 
@@ -110,4 +94,4 @@ If you find this work useful, please cite:
 
 ## Acknowledgments
 
-This work was completed during an internship at **A*STAR, Singapore**, under the guidance of **Dr. Hangwei Qian**.
+This research is supported by the National Research Foundation, Singapore and DSO National Laboratories under the AI Singapore Programme (AISG Award No.: AISG2-GC-2023-010), ``Design Beyond What You Know”: Material-Informed Differential Generative AI (MIDGAI) for Light-Weight High-Entropy Alloys and Multi-functional Composites (Stage 1b). This research is supported by A*STAR Career Development Fund <Project No. C243512010>.
