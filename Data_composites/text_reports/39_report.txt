@@ -1,0 +1,5 @@
+Sample 39.0 was prepared with a fiber (filler) volume fraction of f = 0.20. 
+The matrix constituent parameter was set to c = 18.0, representing an experiment-specific scalar that controls the matrix behavior. 
+The specimen geometry consisted of fibers with a radius r = 1200.0 µm, a thickness t = 20.0 mm, and a width w = 50.0 mm. 
+Loading was applied at a nominal rate of v = 22.0 mm/min in the parallel (0°) to the fiber orientation direction relative to the fiber orientation. 
+Unless otherwise noted, the cross-sectional area (A = t × w) and standard corrections for compliance and grip slippage were applied.
